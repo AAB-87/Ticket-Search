@@ -13,11 +13,11 @@ class TicketTest {
 
     @Test
     public void shouldSortById() {
-        Ticket[] expected = new Ticket[]{first, second, third};
-        Ticket[] actual = new Ticket[]{third, first, second};
+        Ticket[] expected = new Ticket[]{first, second, third}; // превращается в отсортированный массив (1, 2, 3) (читать со второй строки)
+        Ticket[] actual = new Ticket[]{third, first, second}; // неотсортированный массив (3, 1, 2)
 
-        Arrays.sort(actual);
-
+        Arrays.sort(actual); // утилитный класс Arrays (для того чтобы взаимодействовать с различными массивами) вызываем у него
+// метод сортировки массивов sort. Передаём ему actual, т.е неотсортированный массив (3, 1, 2)
         assertArrayEquals(expected, actual);
     }
 }

@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class Ticket implements Comparable<Ticket>  { // реализовываем интерфейс Comparable так, чтобы по умолчанию сортировка происходила по цене (самый дешёвый - самый первый)
+public class Ticket implements Comparable<Ticket>  { // имплементируем класс, реализовываем интерфейс Comparable так, чтобы по умолчанию сортировка происходила по цене (самый дешёвый - самый первый)
     private int id;
     private int price;
     private String departureAirport;
@@ -59,7 +59,8 @@ public class Ticket implements Comparable<Ticket>  { // реализовывае
     }
 
     @Override
-    public int compareTo(Ticket o) {
-        return 0;
+    public int compareTo(Ticket o) { // метод определяет "натуральный" порядок сортировки объектов нашего класса (по возрастанию, по алфавиту итд)
+        Ticket t = (Ticket) o; // объект сравнивает себя с такими же как он. Сравниваем билет у которого есть своя цена и передаём ему билет у которого есть тоже своя цена
+        return this.price - t.price; // вычитаем из одного другой (t - это билет)
     }
 }
