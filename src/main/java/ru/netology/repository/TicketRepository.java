@@ -28,9 +28,6 @@ public class TicketRepository { // репозиторий позволяющий
     }
 
     public void removeById(int id) { // удаление Ticket'а по id
-        if (findById(id) == null) { // из метода removeById вызывайте метод findById: если результат - null, тогда...
-            throw new NotFoundException("Element with id: " + id + " not found"); // ...тогда выкидывайте исключение NotFoundException
-        }
         int length = tickets.length - 1; // // вычисляем длину для нового временного массива
         Ticket[] tmp = new Ticket[length]; // создаём новый временный массив с другой длиной (на единицу меньше)
         int index = 0; // создаём переменную в которой будем хранить следующую ячейку нового набора

@@ -3,18 +3,18 @@ package ru.netology.domain;
 public class Ticket implements Comparable<Ticket>  { // имплементируем класс, реализовываем интерфейс Comparable так, чтобы по умолчанию сортировка происходила по цене (самый дешёвый - самый первый)
     private int id;
     private int price;
-    private String departureAirport;
-    private String arrivalAirport;
+    private String from;
+    private String to;
     private int travelTime;
 
     public Ticket() {
     }
 
-    public Ticket(int id, int price, String departureAirport, String arrivalAirport, int travelTime) {
+    public Ticket(int id, int price, String from, String to, int travelTime) {
         this.id = id;
         this.price = price;
-        this.departureAirport = departureAirport;
-        this.arrivalAirport = arrivalAirport;
+        this.from = from;
+        this.to = to;
         this.travelTime = travelTime;
     }
 
@@ -34,20 +34,20 @@ public class Ticket implements Comparable<Ticket>  { // имплементиру
         this.price = price;
     }
 
-    public String getDepartureAirport() {
-        return departureAirport;
+    public String getFrom() {
+        return from;
     }
 
-    public void setDepartureAirport(String departureAirport) {
-        this.departureAirport = departureAirport;
+    public void setFrom(String from) {
+        this.from = from;
     }
 
-    public String getArrivalAirport() {
-        return arrivalAirport;
+    public String getTo() {
+        return to;
     }
 
-    public void setArrivalAirport(String arrivalAirport) {
-        this.arrivalAirport = arrivalAirport;
+    public void setTo(String to) {
+        this.to = to;
     }
 
     public int getTravelTime() {
