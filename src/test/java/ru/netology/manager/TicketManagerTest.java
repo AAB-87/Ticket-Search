@@ -4,10 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.Ticket;
 import ru.netology.repository.TicketRepository;
-
 import java.util.Arrays;
-import java.util.Objects;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -41,4 +38,19 @@ class TicketManagerTest {
 // метод сортировки массивов sort. Передаём ему actual, т.е неотсортированный массив (3, 1, 2)
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void shouldSearchByFrom() {
+        Ticket[] expected = new Ticket[]{second};
+        Ticket[] actual = manager.searchBy("KUF");
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSearchByFrom2() {
+        Ticket[] expected = new Ticket[]{fourth};
+        Ticket[] actual = manager.searchBy("UFA");
+        assertArrayEquals(expected, actual);
+    }
+
 }

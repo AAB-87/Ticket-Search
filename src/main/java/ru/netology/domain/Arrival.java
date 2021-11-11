@@ -1,7 +1,5 @@
 package ru.netology.domain;
 
-import ru.netology.domain.Ticket;
-
 public class Arrival extends Ticket { // унаследованный от Ticket класса Departure с полем to1
     private String to1;
 

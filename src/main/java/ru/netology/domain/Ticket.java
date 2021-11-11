@@ -1,7 +1,5 @@
 package ru.netology.domain;
 
-import java.util.Objects;
-
 public class Ticket implements Comparable<Ticket>  { // имплементируем класс, реализовываем интерфейс Comparable так, чтобы по умолчанию сортировка происходила по цене (самый дешёвый - самый первый)
     private int id;
     private int price;
