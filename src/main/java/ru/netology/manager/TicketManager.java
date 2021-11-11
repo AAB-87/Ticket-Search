@@ -1,4 +1,5 @@
 package ru.netology.manager;
+
 import ru.netology.domain.Departure;
 import ru.netology.domain.Ticket;
 import ru.netology.repository.TicketRepository;
@@ -37,25 +38,25 @@ public class TicketManager { // менеджер поиска по аэропо�
 
     public boolean matches(Ticket ticket, String search) {
         if (ticket instanceof departure) { // если в параметре ticket лежит from
-            From from = (From) ticket; // положим его в переменную типа Book чтобы пользоваться методами класса Book
-            if (ticket.getFrom().contains(search)) { // проверим есть ли поисковое слово в данных об
+            Departure departure = (Departure) ticket; // положим его в переменную типа Book чтобы пользоваться методами класса Book
+            if (departure.getFrom1().contains(search)) { // проверим есть ли поисковое слово в данных об
                 return true;
             }
-            if (ticket.getTo().contains(search)) {
+            if (departure.getFrom().contains(search)) {
                 return true;
             }
             return false;
         }
-//        if (ticket instanceof Smartphone) { // если в параметре ticket лежит объект класса Book
-//            Smartphone smartphone = (Smartphone) ticket; // положим его в переменную типа Book чтобы пользоваться методами класса Book
-//            if (smartphone.getManufacturer().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
-//                return true;
-//            }
-//            if (smartphone.getName().contains(search)) {
-//                return true;
-//            }
-//            return false;
-//        }
-//        return false; // если в параметре ticket лежит объект не класса Book и не класса Smartphone, ничего не делать
-//    }
-}
+////        if (ticket instanceof Smartphone) { // если в параметре ticket лежит объект класса Book
+////            Smartphone smartphone = (Smartphone) ticket; // положим его в переменную типа Book чтобы пользоваться методами класса Book
+////            if (smartphone.getManufacturer().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
+////                return true;
+////            }
+////            if (smartphone.getName().contains(search)) {
+////                return true;
+////            }
+////            return false;
+////        }
+////        return false; // если в параметре ticket лежит объект не класса Book и не класса Smartphone, ничего не делать
+////    }
+//}
