@@ -6,6 +6,8 @@ import ru.netology.domain.Ticket;
 import ru.netology.repository.TicketRepository;
 
 import java.util.Arrays;
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -39,7 +41,4 @@ class TicketManagerTest {
 // метод сортировки массивов sort. Передаём ему actual, т.е неотсортированный массив (3, 1, 2)
         assertArrayEquals(expected, actual);
     }
-
-
-
 }
