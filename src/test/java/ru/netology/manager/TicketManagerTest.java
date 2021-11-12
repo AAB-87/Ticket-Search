@@ -42,16 +42,16 @@ class TicketManagerTest {
     }
 
     @Test
-    public void shouldSearchByFromTo() { // нет билетов
-        Ticket[] expected = new Ticket[]{}; // нет билетов в репозиториии
-        Ticket[] actual = manager.searchBy("KUF", "EVN"); // пользователь ищет билет
-        assertArrayEquals(expected, actual);
+    public void shouldSearchByFromTo() { // нет подходящего рейса
+        Ticket[] expected = new Ticket[]{}; // нет билетов в репозитории
+        Ticket[] actual = manager.searchBy("OGZ", "VKO"); // пользователь ищет билет Владикавказ - Внуково
+        assertArrayEquals(expected, actual); // метод сравнивает две ссылки (две строки выше)
     }
 
     @Test
-    public void shouldSearchByFromToThenHave2Tickets() { // есть два билета в нужном направлении
-        Ticket[] expected = new Ticket[]{first, sixth};
-        Ticket[] actual = manager.searchBy("KUF", "LED");
+    public void shouldSearchByFromToThenHave2Tickets() { // есть два билета
+        Ticket[] expected = new Ticket[]{first, sixth}; // есть два билета в нужном направлении
+        Ticket[] actual = manager.searchBy("KUF", "LED"); // пользователь ищет билет
         assertArrayEquals(expected, actual); // метод сравнивает две ссылки (две строки выше)
     }
 
