@@ -7,10 +7,10 @@ public class Ticket implements Comparable<Ticket>  { // имплементиру
     private String to;
     private int travelTime;
 
-    public Ticket() {
+    public Ticket() { // конструктор
     }
 
-    public Ticket(int id, int price, String from, String to, int travelTime) {
+    public Ticket(int id, int price, String from, String to, int travelTime) { // конструктор
         this.id = id;
         this.price = price;
         this.from = from;
@@ -18,6 +18,8 @@ public class Ticket implements Comparable<Ticket>  { // имплементиру
         this.travelTime = travelTime;
     }
 
+
+    // геттеры и сеттеры
     public int getId() {
         return id;
     }
@@ -58,6 +60,8 @@ public class Ticket implements Comparable<Ticket>  { // имплементиру
         this.travelTime = travelTime;
     }
 
+
+    // Переопределение
     @Override
     public int compareTo(Ticket o) { // метод определяет "натуральный" порядок сортировки объектов нашего класса (по возрастанию, по алфавиту итд)
         Ticket t = (Ticket) o; // объект сравнивает себя с такими же как он. Сравниваем билет у которого есть своя цена и передаём ему билет у которого есть тоже своя цена

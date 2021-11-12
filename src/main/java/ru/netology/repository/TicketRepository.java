@@ -5,7 +5,7 @@ import ru.netology.domain.Ticket;
 public class TicketRepository { // репозиторий позволяющий сохранять Ticket'ы, получать все сохранённые Ticket'ы и удалять по id
     private Ticket[] tickets = new Ticket[0]; // для этого репозиторий будет хранить у себя поле с типом Ticket[] (массив билетов)
 
-    public void save(Ticket ticket) { // сохранение Ticket'а (в параметрах принимается новый билет в массив БИЛЕТ)
+    public void save(Ticket ticket) { // сохранение Ticket'а (в параметрах принимается новый билет в массив с типом Билет)
         int length = tickets.length + 1; // вычисляем длину для нового временного массива (длина текущего массива + 1)
         Ticket[] tmp = new Ticket[length]; // создаём временный массив с другой длиной (на единицу больше)
         System.arraycopy(tickets, 0, tmp, 0, tickets.length);// копируем массив (откуда копируем, с какого места копируем, куда копируем, с какого места начать заполнение нового массива, кол-во элементов которое хотим скопировать)
