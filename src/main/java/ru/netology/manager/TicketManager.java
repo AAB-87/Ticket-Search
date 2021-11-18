@@ -38,19 +38,8 @@ public class TicketManager { // менеджер поиска по аэропо�
         return result;
     }
 
-//    public boolean matches(Ticket ticket, String from, String to) { // метод проверяет, соответствует ли продукт поисковому запросу
-//        if (ticket.getFrom().contains(from)) { // проверим есть ли поисковое слово в данных о from
-//        }
-//        return false;
-//
-//            if (ticket.getTo().contains(to)) { // проверим есть ли поисковое слово в данных о to
-//                return true;
-//            }
-//        return false;
-//    }
-
-    public boolean matches(Ticket ticket, String search1, String search2) {
-        if (ticket.getFrom().contains(search1) && ticket.getTo().contains(search2)) {
+    public boolean matches(Ticket ticket, String from, String to) {
+        if (ticket.getFrom().contains(from) && ticket.getTo().contains(to)) { // проверяем содержит ли строка подстроку from и to (логическое И && вернёт true если обе части уравнения вернут true)
             return true;
         }
         return false;
