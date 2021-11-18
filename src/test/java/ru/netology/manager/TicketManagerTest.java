@@ -33,8 +33,8 @@ class TicketManagerTest {
 
     @Test
     public void shouldSortById() {
-        Ticket[] expected = new Ticket[]{first, sixth, second, fourth, fifth, third}; // превращается в отсортированный массив (1, 2, 3) (читать со второй строки)
-        Ticket[] actual = new Ticket[]{third, fourth, first, fifth, sixth, second}; // неотсортированный массив (3, 1, 2)
+        Ticket[] expected = new Ticket[]{first, sixth, second, fourth, fifth, third}; // превращается в отсортированный массив (по возрастанию цены) (читать со второй строки)
+        Ticket[] actual = new Ticket[]{third, fourth, first, fifth, sixth, second}; // неотсортированный массив
 
         Arrays.sort(actual); // утилитный класс Arrays (для того чтобы взаимодействовать с различными массивами) вызываем у него
 // метод сортировки массивов sort. Передаём ему actual, т.е неотсортированный массив (3, 1, 2)
